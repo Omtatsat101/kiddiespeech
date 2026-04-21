@@ -1,0 +1,13 @@
+node_modules
+.next
+dist
+build
+.expo
+.vercel
+coverage
+.DS_Store
+*.log
+.env
+.env.local
+.env.*.local
+
