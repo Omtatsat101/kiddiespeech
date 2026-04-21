@@ -1,8 +1,10 @@
 node_modules
 .next
+apps/web/out
 dist
 build
 .expo
+.wrangler
 .vercel
 coverage
 .DS_Store
@@ -10,4 +12,3 @@ coverage
 .env
 .env.local
 .env.*.local
-
