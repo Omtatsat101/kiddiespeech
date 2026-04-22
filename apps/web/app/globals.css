@@ -36,7 +36,9 @@ a {
 .billing-shell,
 .parents-shell,
 .kids-shell,
-.compare-shell {
+.compare-shell,
+.languages-shell,
+.voices-shell {
   min-height: 100vh;
 }
 
@@ -45,7 +47,9 @@ a {
 .billing-hero,
 .parents-hero,
 .kids-hero,
-.compare-hero {
+.compare-hero,
+.languages-hero,
+.voices-hero {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 2rem;
@@ -58,7 +62,9 @@ a {
 .billing-hero h1,
 .parents-hero h1,
 .kids-hero h1,
-.compare-hero h1 {
+.compare-hero h1,
+.languages-hero h1,
+.voices-hero h1 {
   font-size: clamp(2.8rem, 6vw, 5.8rem);
   line-height: 0.95;
   margin: 0.3rem 0 1rem;
@@ -78,7 +84,9 @@ a {
 .billing-hero p,
 .parents-hero p,
 .kids-hero p,
-.compare-hero p {
+.compare-hero p,
+.languages-hero p,
+.voices-hero p {
   max-width: 40rem;
   font-size: 1.08rem;
   line-height: 1.7;

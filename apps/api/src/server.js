@@ -6,7 +6,8 @@ import {
   recordBillingEvent,
   verifyStripeEvent
 } from "./lib/billing.js";
-import { getPublicCatalog } from "./lib/config.js";
+import { getExperienceCatalog, getPublicCatalog } from "./lib/config.js";
+import { decryptField, encryptField, privacyStatus } from "./lib/privacy.js";
 
 const app = express();
 const port = Number(process.env.API_PORT ?? 4010);
@@ -21,6 +22,42 @@ app.get("/health", (_req, res) => {
 
 app.get("/catalog", (_req, res) => {
   res.json(getPublicCatalog());
+});
+
+app.get("/experience", (_req, res) => {
+  res.json(getExperienceCatalog());
+});
+
+app.get("/privacy/status", (_req, res) => {
+  res.json(privacyStatus());
+});
+
+app.post("/privacy/encrypt", express.json(), (req, res) => {
+  try {
+    const { value } = req.body ?? {};
+
+    if (!value) {
+      return res.status(400).json({ error: "value is required" });
+    }
+
+    return res.status(201).json(encryptField(value));
+  } catch (error) {
+    return res.status(500).json({
+      error: error instanceof Error ? error.message : "Encryption failed"
+    });
+  }
+});
+
+app.post("/privacy/decrypt", express.json(), (req, res) => {
+  try {
+    return res.json({
+      value: decryptField(req.body)
+    });
+  } catch (error) {
+    return res.status(500).json({
+      error: error instanceof Error ? error.message : "Decryption failed"
+    });
+  }
 });
 
 app.post("/billing/checkout", express.json(), async (req, res) => {
@@ -81,4 +118,3 @@ app.post("/billing/webhooks/stripe", express.raw({ type: "application/json" }), 
 app.listen(port, () => {
   console.log(`KiddieSpeech API listening on http://localhost:${port}`);
 });
-

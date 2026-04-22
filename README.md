@@ -35,6 +35,14 @@ npm run dev:api
 - API service exposes `/catalog`, `/billing/checkout`, and `/billing/webhooks/stripe`
 - Supabase migration adds billing customers, billing events, entitlements, and price catalog tables
 
+## Privacy, Language, and Voice Readiness
+- API service exposes `/experience`, `/privacy/status`, `/privacy/encrypt`, and `/privacy/decrypt`
+- `DATA_ENCRYPTION_KEY` is supported for field-level encryption in the API layer
+- Supabase migration adds language profiles, curated language assets, knowledge sources, voice profiles, creator voice submissions, and privacy preferences
+- web app now includes:
+  - `apps/web/app/languages`
+  - `apps/web/app/voices`
+
 ## Consumer Readiness
 - parent dashboard concept: `apps/web/app/parents`
 - child session concept: `apps/web/app/kids`
@@ -45,7 +53,9 @@ npm run dev:api
 - fill `apps/api/.env.example` values into a real `.env`
 - add Stripe secret and webhook secret
 - add Supabase URL and service role key
+- add `DATA_ENCRYPTION_KEY`
 - apply:
   - `supabase/schema.sql`
   - `supabase/seed.sql`
   - `supabase/migrations/2026-04-22_billing_and_growth.sql`
+  - `supabase/migrations/2026-04-22_privacy_language_voice.sql`

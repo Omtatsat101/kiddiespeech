@@ -1,4 +1,11 @@
-import { adminPlaybooks, featurePipeline, feedbackPrioritizationSignals } from "@kiddiespeech/config";
+import {
+  adminPlaybooks,
+  costLevers,
+  featurePipeline,
+  feedbackPrioritizationSignals,
+  languageCatalog,
+  voiceCatalog
+} from "@kiddiespeech/config";
 
 export default function AdminPage() {
   return (
@@ -79,6 +86,51 @@ export default function AdminPage() {
               <li>Plan-to-usage crossover signals</li>
             </ul>
           </article>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-intro">
+          <p className="eyebrow">Language and voice ops</p>
+          <h2>Review-first operations for multilingual quality and creator voices.</h2>
+        </div>
+        <div className="admin-grid">
+          <article className="admin-card">
+            <h2>Language coverage</h2>
+            <ul>
+              {languageCatalog.map((item) => (
+                <li key={item.code}>
+                  {item.name} - {item.status} - {item.tier}
+                </li>
+              ))}
+            </ul>
+          </article>
+          <article className="admin-card">
+            <h2>Voice inventory</h2>
+            <ul>
+              {voiceCatalog.map((item) => (
+                <li key={item.name}>
+                  {item.name} - {item.kind} - {item.quality}
+                </li>
+              ))}
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-intro">
+          <p className="eyebrow">Cost robustness</p>
+          <h2>How the platform should stay dynamic without burning margin.</h2>
+        </div>
+        <div className="compare-table">
+          {costLevers.map((item) => (
+            <article className="compare-row" key={item.name}>
+              <strong>{item.name}</strong>
+              <span>{item.impact}</span>
+              <span>{item.method}</span>
+            </article>
+          ))}
         </div>
       </section>
     </main>

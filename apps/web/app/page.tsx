@@ -1,9 +1,12 @@
 import {
   aiProviderStack,
   competitiveDifferentiators,
+  costLevers,
   feedbackQueue,
+  privacyLayers,
   payAsYouUseMeters,
-  subscriptionPlans
+  subscriptionPlans,
+  voiceCatalog
 } from "@kiddiespeech/config";
 
 const heroBullets = [
@@ -28,6 +31,7 @@ export default function HomePage() {
             <a className="button button-primary" href="#pricing">See pricing</a>
             <a className="button button-secondary" href="/billing">Open billing</a>
             <a className="button button-secondary" href="/compare">Why switch</a>
+            <a className="button button-secondary" href="/languages">Languages</a>
           </div>
           <ul className="hero-bullets">
             {heroBullets.map((item) => (
@@ -159,6 +163,53 @@ export default function HomePage() {
 
       <section className="section">
         <div className="section-intro">
+          <p className="eyebrow">Privacy and trust</p>
+          <h2>Families need to know this app treats child data carefully.</h2>
+        </div>
+        <div className="ops-grid">
+          {privacyLayers.map((item) => (
+            <article className="ops-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-intro">
+          <p className="eyebrow">Voice realism</p>
+          <h2>Voices should feel human without losing safety or margin discipline.</h2>
+        </div>
+        <div className="ops-grid">
+          {voiceCatalog.map((voice) => (
+            <article className="ops-card" key={voice.name}>
+              <h3>{voice.name}</h3>
+              <p>{voice.tone}</p>
+              <span>{voice.quality}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-intro">
+          <p className="eyebrow">Cost levers</p>
+          <h2>Reduce cost while making the platform more robust and dynamic.</h2>
+        </div>
+        <div className="ops-grid">
+          {costLevers.map((item) => (
+            <article className="ops-card" key={item.name}>
+              <h3>{item.name}</h3>
+              <p>{item.method}</p>
+              <span>{item.impact}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-intro">
           <p className="eyebrow">Feedback loop</p>
           <h2>Parents vote. AI prioritizes. Codex and Claude ship.</h2>
         </div>
@@ -198,6 +249,11 @@ export default function HomePage() {
             <h3>Comparison</h3>
             <p>Open the differentiation surface that explains why a family would switch from a general language app.</p>
             <a href="/compare">Open comparison view</a>
+          </article>
+          <article>
+            <h3>Voices</h3>
+            <p>Open the voice system surface to see platform voices, creator voices, and review gating.</p>
+            <a href="/voices">Open voice system</a>
           </article>
         </div>
       </section>

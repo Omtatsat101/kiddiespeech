@@ -60,6 +60,34 @@ export type FeedbackPrioritizationSignal = {
   why: string;
 };
 
+export type LanguageCatalogItem = {
+  code: string;
+  name: string;
+  script: string;
+  tier: string;
+  status: string;
+  supportLevel: string;
+};
+
+export type ExperienceCard = {
+  title: string;
+  detail: string;
+};
+
+export type VoiceCatalogItem = {
+  name: string;
+  kind: string;
+  tone: string;
+  quality: string;
+  source: string;
+};
+
+export type CostLever = {
+  name: string;
+  impact: string;
+  method: string;
+};
+
 export type StripePrice = {
   label: string;
   lookupKey: string;
@@ -87,3 +115,8 @@ export const parentDashboardSnapshot: ParentDashboardSnapshot;
 export const childExperienceMoments: ChildExperienceMoment[];
 export const competitiveDifferentiators: CompetitiveDifferentiator[];
 export const feedbackPrioritizationSignals: FeedbackPrioritizationSignal[];
+export const languageCatalog: LanguageCatalogItem[];
+export const languageSystemStrategies: ExperienceCard[];
+export const voiceCatalog: VoiceCatalogItem[];
+export const privacyLayers: ExperienceCard[];
+export const costLevers: CostLever[];

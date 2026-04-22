@@ -1,14 +1,31 @@
 import {
+  costLevers,
+  languageCatalog,
+  languageSystemStrategies,
   payAsYouUseMeters,
   stripeProducts,
-  subscriptionPlans
+  subscriptionPlans,
+  voiceCatalog,
+  privacyLayers
 } from "@kiddiespeech/config";
 
 export function getPublicCatalog() {
   return {
     subscriptionPlans,
     stripeProducts,
-    payAsYouUseMeters
+    payAsYouUseMeters,
+    languageCatalog,
+    voiceCatalog
+  };
+}
+
+export function getExperienceCatalog() {
+  return {
+    languageCatalog,
+    languageSystemStrategies,
+    voiceCatalog,
+    privacyLayers,
+    costLevers
   };
 }
 
@@ -26,4 +43,3 @@ export function findStripePriceByLookupKey(lookupKey) {
 
   return null;
 }
-
