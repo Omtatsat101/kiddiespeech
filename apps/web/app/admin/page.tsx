@@ -1,4 +1,4 @@
-import { adminPlaybooks, featurePipeline } from "@kiddiespeech/config";
+import { adminPlaybooks, featurePipeline, feedbackPrioritizationSignals } from "@kiddiespeech/config";
 
 export default function AdminPage() {
   return (
@@ -34,6 +34,22 @@ export default function AdminPage() {
             <article key={step.title}>
               <h3>{step.title}</h3>
               <p>{step.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-intro">
+          <p className="eyebrow">Prioritization model</p>
+          <h2>What the feedback agent should optimize for.</h2>
+        </div>
+        <div className="compare-table">
+          {feedbackPrioritizationSignals.map((item) => (
+            <article className="compare-row" key={item.signal}>
+              <strong>{item.signal}</strong>
+              <span>{item.weight}</span>
+              <span>{item.why}</span>
             </article>
           ))}
         </div>

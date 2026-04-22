@@ -35,6 +35,12 @@ npm run dev:api
 - API service exposes `/catalog`, `/billing/checkout`, and `/billing/webhooks/stripe`
 - Supabase migration adds billing customers, billing events, entitlements, and price catalog tables
 
+## Consumer Readiness
+- parent dashboard concept: `apps/web/app/parents`
+- child session concept: `apps/web/app/kids`
+- switch/comparison view: `apps/web/app/compare`
+- current readiness note: `CONSUMER-READINESS.md`
+
 ## Required Billing Setup
 - fill `apps/api/.env.example` values into a real `.env`
 - add Stripe secret and webhook secret

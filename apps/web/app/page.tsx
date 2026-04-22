@@ -1,5 +1,6 @@
 import {
   aiProviderStack,
+  competitiveDifferentiators,
   feedbackQueue,
   payAsYouUseMeters,
   subscriptionPlans
@@ -26,6 +27,7 @@ export default function HomePage() {
           <div className="hero-actions">
             <a className="button button-primary" href="#pricing">See pricing</a>
             <a className="button button-secondary" href="/billing">Open billing</a>
+            <a className="button button-secondary" href="/compare">Why switch</a>
           </div>
           <ul className="hero-bullets">
             {heroBullets.map((item) => (
@@ -67,6 +69,21 @@ export default function HomePage() {
             <h3>Admin console</h3>
             <p>Provider routing, quota controls, feature flags, safety queues, and feedback-driven roadmap management.</p>
           </article>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-intro">
+          <p className="eyebrow">Replacement test</p>
+          <h2>Why would a family leave a general language app?</h2>
+        </div>
+        <div className="ops-grid">
+          {competitiveDifferentiators.map((item) => (
+            <article className="ops-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -158,6 +175,30 @@ export default function HomePage() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-intro">
+          <p className="eyebrow">Application paths</p>
+          <h2>The app is starting to feel like a real system, not just a concept.</h2>
+        </div>
+        <div className="split-grid">
+          <article>
+            <h3>Parents</h3>
+            <p>Open the dedicated parent surface to review progress, controls, and recommendations.</p>
+            <a href="/parents">Open parent dashboard</a>
+          </article>
+          <article>
+            <h3>Kids</h3>
+            <p>Open the kid-focused session story loop to see how daily speech practice becomes a habit.</p>
+            <a href="/kids">Open child experience</a>
+          </article>
+          <article>
+            <h3>Comparison</h3>
+            <p>Open the differentiation surface that explains why a family would switch from a general language app.</p>
+            <a href="/compare">Open comparison view</a>
+          </article>
         </div>
       </section>
     </main>

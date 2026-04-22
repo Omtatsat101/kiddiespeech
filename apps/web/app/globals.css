@@ -33,13 +33,19 @@ a {
 
 .page-shell,
 .admin-shell,
-.billing-shell {
+.billing-shell,
+.parents-shell,
+.kids-shell,
+.compare-shell {
   min-height: 100vh;
 }
 
 .hero,
 .admin-hero,
-.billing-hero {
+.billing-hero,
+.parents-hero,
+.kids-hero,
+.compare-hero {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 2rem;
@@ -49,7 +55,10 @@ a {
 
 .hero-copy h1,
 .admin-hero h1,
-.billing-hero h1 {
+.billing-hero h1,
+.parents-hero h1,
+.kids-hero h1,
+.compare-hero h1 {
   font-size: clamp(2.8rem, 6vw, 5.8rem);
   line-height: 0.95;
   margin: 0.3rem 0 1rem;
@@ -66,7 +75,10 @@ a {
 
 .lede,
 .admin-hero p,
-.billing-hero p {
+.billing-hero p,
+.parents-hero p,
+.kids-hero p,
+.compare-hero p {
   max-width: 40rem;
   font-size: 1.08rem;
   line-height: 1.7;
@@ -232,9 +244,11 @@ a {
 .price-card,
 .ops-card,
 .admin-card,
+.metric-card,
 .pipeline-list article,
 .meter-row,
-.queue-row {
+.queue-row,
+.compare-row {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 1.5rem;
@@ -262,18 +276,37 @@ a {
 }
 
 .meter-grid,
-.queue-list {
+.queue-list,
+.compare-table,
+.metrics-grid {
   display: grid;
   gap: 1rem;
   margin-top: 1rem;
 }
 
 .meter-row,
-.queue-row {
+.queue-row,
+.compare-row {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
   align-items: flex-start;
+}
+
+.metrics-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.metric-card h2 {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  margin: 0.35rem 0 0;
+}
+
+.session-stage {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(183, 234, 215, 0.3));
+  border: 1px solid var(--line);
+  border-radius: 2rem;
+  padding: 1.5rem;
 }
 
 .queue-meta {
@@ -302,7 +335,8 @@ a {
   .pricing-grid,
   .ops-grid,
   .admin-grid,
-  .pipeline-list {
+  .pipeline-list,
+  .metrics-grid {
     grid-template-columns: 1fr;
   }
 }

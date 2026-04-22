@@ -98,3 +98,63 @@ export const featurePipeline = [
   }
 ];
 
+export const parentDashboardSnapshot = {
+  weeklyMinutes: 84,
+  completedSessions: 12,
+  articulationFocus: "S blends and sentence expansion",
+  confidenceTrend: "+18%",
+  nextRecommendation: "Try the bilingual story quest with Mira for 8 minutes tonight."
+};
+
+export const childExperienceMoments = [
+  {
+    title: "Daily quest",
+    description: "A short, character-led mission that keeps practice predictable and easy to start."
+  },
+  {
+    title: "Speech mirror",
+    description: "Repeat-after-me prompts and phrase expansion loops designed for supportive correction."
+  },
+  {
+    title: "Story reward",
+    description: "Progress unlocks the next part of a story instead of just granting points."
+  }
+];
+
+export const competitiveDifferentiators = [
+  {
+    title: "Built for speech growth, not generic language drills",
+    detail: "KiddieSpeech focuses on articulation, expressive language, confidence, and parent-supported carryover."
+  },
+  {
+    title: "Parent controls are part of the core product",
+    detail: "Daily limits, transcript settings, language approvals, and safety visibility are first-class features."
+  },
+  {
+    title: "AI routing is cost-aware and child-safe",
+    detail: "Open-source usage is bounded, premium models are gated, and operators can tune quality against cost."
+  }
+];
+
+export const feedbackPrioritizationSignals = [
+  {
+    signal: "Vote volume",
+    weight: "35%",
+    why: "Shows direct parent demand."
+  },
+  {
+    signal: "Retention impact",
+    weight: "30%",
+    why: "Prioritizes features that keep families coming back daily."
+  },
+  {
+    signal: "Revenue leverage",
+    weight: "20%",
+    why: "Supports upgrades, add-ons, or lower churn."
+  },
+  {
+    signal: "Safety and implementation risk",
+    weight: "15%",
+    why: "Keeps roadmap quality high and avoids rushing risky features."
+  }
+];

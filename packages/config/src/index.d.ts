@@ -36,6 +36,30 @@ export type FeaturePipelineStep = {
   detail: string;
 };
 
+export type ParentDashboardSnapshot = {
+  weeklyMinutes: number;
+  completedSessions: number;
+  articulationFocus: string;
+  confidenceTrend: string;
+  nextRecommendation: string;
+};
+
+export type ChildExperienceMoment = {
+  title: string;
+  description: string;
+};
+
+export type CompetitiveDifferentiator = {
+  title: string;
+  detail: string;
+};
+
+export type FeedbackPrioritizationSignal = {
+  signal: string;
+  weight: string;
+  why: string;
+};
+
 export type StripePrice = {
   label: string;
   lookupKey: string;
@@ -59,3 +83,7 @@ export const feedbackQueue: FeedbackQueueItem[];
 export const adminPlaybooks: AdminPlaybook[];
 export const featurePipeline: FeaturePipelineStep[];
 export const stripeProducts: StripeProduct[];
+export const parentDashboardSnapshot: ParentDashboardSnapshot;
+export const childExperienceMoments: ChildExperienceMoment[];
+export const competitiveDifferentiators: CompetitiveDifferentiator[];
+export const feedbackPrioritizationSignals: FeedbackPrioritizationSignal[];
