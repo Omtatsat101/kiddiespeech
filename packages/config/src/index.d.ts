@@ -88,6 +88,40 @@ export type CostLever = {
   method: string;
 };
 
+export type MoonshotFeature = {
+  title: string;
+  summary: string;
+  buildability: string;
+  moat: string;
+};
+
+export type RitualMode = {
+  name: string;
+  mood: string;
+  useCase: string;
+};
+
+export type FamilyPresenceFeature = {
+  title: string;
+  detail: string;
+};
+
+export type MoatPillar = {
+  title: string;
+  detail: string;
+  whyHardToCopy: string;
+};
+
+export type BabyCommunicationFeature = {
+  title: string;
+  detail: string;
+};
+
+export type MoatBuildStep = {
+  stage: string;
+  move: string;
+};
+
 export type StripePrice = {
   label: string;
   lookupKey: string;
@@ -120,3 +154,11 @@ export const languageSystemStrategies: ExperienceCard[];
 export const voiceCatalog: VoiceCatalogItem[];
 export const privacyLayers: ExperienceCard[];
 export const costLevers: CostLever[];
+export const moonshotFeatures: MoonshotFeature[];
+export const ritualModes: RitualMode[];
+export const familyPresenceFeatures: FamilyPresenceFeature[];
+export const buildNowIdeas: string[];
+export const moatPillars: MoatPillar[];
+export const babyCommunicationFeatures: BabyCommunicationFeature[];
+export const babyCommunicationGuardrails: string[];
+export const moatBuildSequence: MoatBuildStep[];

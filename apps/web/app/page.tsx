@@ -1,8 +1,10 @@
 import {
   aiProviderStack,
+  babyCommunicationFeatures,
   competitiveDifferentiators,
   costLevers,
   feedbackQueue,
+  moatPillars,
   privacyLayers,
   payAsYouUseMeters,
   subscriptionPlans,
@@ -32,6 +34,7 @@ export default function HomePage() {
             <a className="button button-secondary" href="/billing">Open billing</a>
             <a className="button button-secondary" href="/compare">Why switch</a>
             <a className="button button-secondary" href="/languages">Languages</a>
+            <a className="button button-secondary" href="/moat">Moat</a>
           </div>
           <ul className="hero-bullets">
             {heroBullets.map((item) => (
@@ -86,6 +89,22 @@ export default function HomePage() {
             <article className="ops-card" key={item.title}>
               <h3>{item.title}</h3>
               <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-intro">
+          <p className="eyebrow">Moat</p>
+          <h2>Build things that generic education apps won’t naturally build.</h2>
+        </div>
+        <div className="ops-grid">
+          {moatPillars.slice(0, 3).map((item) => (
+            <article className="ops-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+              <span>{item.whyHardToCopy}</span>
             </article>
           ))}
         </div>
@@ -194,6 +213,21 @@ export default function HomePage() {
 
       <section className="section">
         <div className="section-intro">
+          <p className="eyebrow">Parent intelligence</p>
+          <h2>Extend the platform into early communication support.</h2>
+        </div>
+        <div className="ops-grid">
+          {babyCommunicationFeatures.map((item) => (
+            <article className="ops-card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.detail}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-intro">
           <p className="eyebrow">Cost levers</p>
           <h2>Reduce cost while making the platform more robust and dynamic.</h2>
         </div>
@@ -254,6 +288,11 @@ export default function HomePage() {
             <h3>Voices</h3>
             <p>Open the voice system surface to see platform voices, creator voices, and review gating.</p>
             <a href="/voices">Open voice system</a>
+          </article>
+          <article>
+            <h3>Baby communication</h3>
+            <p>Open the parent intelligence layer for early cue tracking and communication support.</p>
+            <a href="/baby-communication">Open baby communication</a>
           </article>
         </div>
       </section>

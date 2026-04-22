@@ -1,9 +1,11 @@
 import {
   adminPlaybooks,
+  babyCommunicationGuardrails,
   costLevers,
   featurePipeline,
   feedbackPrioritizationSignals,
   languageCatalog,
+  moatPillars,
   voiceCatalog
 } from "@kiddiespeech/config";
 
@@ -129,6 +131,36 @@ export default function AdminPage() {
               <strong>{item.name}</strong>
               <span>{item.impact}</span>
               <span>{item.method}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-intro">
+          <p className="eyebrow">Strategic moat review</p>
+          <h2>What should stay central as the platform grows.</h2>
+        </div>
+        <div className="compare-table">
+          {moatPillars.map((item) => (
+            <article className="compare-row" key={item.title}>
+              <strong>{item.title}</strong>
+              <span>{item.whyHardToCopy}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-intro">
+          <p className="eyebrow">Baby communication guardrails</p>
+          <h2>Keep the parent intelligence layer useful and responsible.</h2>
+        </div>
+        <div className="compare-table">
+          {babyCommunicationGuardrails.map((item) => (
+            <article className="compare-row" key={item}>
+              <strong>Guardrail</strong>
+              <span>{item}</span>
             </article>
           ))}
         </div>

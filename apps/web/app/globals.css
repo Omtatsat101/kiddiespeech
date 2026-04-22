@@ -38,7 +38,9 @@ a {
 .kids-shell,
 .compare-shell,
 .languages-shell,
-.voices-shell {
+.voices-shell,
+.moat-shell,
+.baby-shell {
   min-height: 100vh;
 }
 
@@ -49,7 +51,9 @@ a {
 .kids-hero,
 .compare-hero,
 .languages-hero,
-.voices-hero {
+.voices-hero,
+.moat-hero,
+.baby-hero {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 2rem;
@@ -64,7 +68,9 @@ a {
 .kids-hero h1,
 .compare-hero h1,
 .languages-hero h1,
-.voices-hero h1 {
+.voices-hero h1,
+.moat-hero h1,
+.baby-hero h1 {
   font-size: clamp(2.8rem, 6vw, 5.8rem);
   line-height: 0.95;
   margin: 0.3rem 0 1rem;
@@ -86,7 +92,9 @@ a {
 .kids-hero p,
 .compare-hero p,
 .languages-hero p,
-.voices-hero p {
+.voices-hero p,
+.moat-hero p,
+.baby-hero p {
   max-width: 40rem;
   font-size: 1.08rem;
   line-height: 1.7;

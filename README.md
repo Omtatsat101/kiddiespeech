@@ -49,6 +49,11 @@ npm run dev:api
 - switch/comparison view: `apps/web/app/compare`
 - current readiness note: `CONSUMER-READINESS.md`
 
+## Strategic Moat
+- moat view: `apps/web/app/moat`
+- baby communication layer: `apps/web/app/baby-communication`
+- strategy note: `MOAT-STRATEGY.md`
+
 ## Required Billing Setup
 - fill `apps/api/.env.example` values into a real `.env`
 - add Stripe secret and webhook secret
