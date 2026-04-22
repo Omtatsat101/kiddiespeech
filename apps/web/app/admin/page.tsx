@@ -38,7 +38,33 @@ export default function AdminPage() {
           ))}
         </div>
       </section>
+
+      <section className="section">
+        <div className="section-intro">
+          <p className="eyebrow">Revenue operations</p>
+          <h2>Operator controls for scaling monetization safely.</h2>
+        </div>
+        <div className="admin-grid">
+          <article className="admin-card">
+            <h2>Subscription health</h2>
+            <p>Track active subscriptions, churn risk, trial conversion, and failed payment recovery by cohort.</p>
+            <ul>
+              <li>Starter to Growth upsell prompts</li>
+              <li>Family plan expansion monitoring</li>
+              <li>Renewal and cancellation rescue flows</li>
+            </ul>
+          </article>
+          <article className="admin-card">
+            <h2>Usage monetization</h2>
+            <p>Watch pay-as-you-use packs, premium minute consumption, and provider-margin pressure.</p>
+            <ul>
+              <li>AI provider budget ceilings</li>
+              <li>Meter burn-rate thresholds</li>
+              <li>Plan-to-usage crossover signals</li>
+            </ul>
+          </article>
+        </div>
+      </section>
     </main>
   );
 }
-

@@ -25,7 +25,7 @@ export default function HomePage() {
           </p>
           <div className="hero-actions">
             <a className="button button-primary" href="#pricing">See pricing</a>
-            <a className="button button-secondary" href="#ops">View AI ops</a>
+            <a className="button button-secondary" href="/billing">Open billing</a>
           </div>
           <ul className="hero-bullets">
             {heroBullets.map((item) => (
@@ -121,6 +121,27 @@ export default function HomePage() {
 
       <section className="section">
         <div className="section-intro">
+          <p className="eyebrow">Scale readiness</p>
+          <h2>Monetization, safety, and growth systems are being built together.</h2>
+        </div>
+        <div className="split-grid">
+          <article>
+            <h3>Billing backend</h3>
+            <p>Stripe checkout and webhook routes are scaffolded in the API app with Supabase event persistence.</p>
+          </article>
+          <article>
+            <h3>Entitlements</h3>
+            <p>Plans, add-ons, metering events, and feature gating are modeled in the shared config and database.</p>
+          </article>
+          <article>
+            <h3>Operator visibility</h3>
+            <p>Admin workflows can monitor provider budgets, billing events, upgrades, and feedback-driven roadmap demand.</p>
+          </article>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-intro">
           <p className="eyebrow">Feedback loop</p>
           <h2>Parents vote. AI prioritizes. Codex and Claude ship.</h2>
         </div>
@@ -142,4 +163,3 @@ export default function HomePage() {
     </main>
   );
 }
-

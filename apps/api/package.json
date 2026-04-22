@@ -1,0 +1,19 @@
+{
+  "name": "@kiddiespeech/api",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "check": "node --check src/server.js && node --check src/lib/billing.js && node --check src/lib/config.js"
+  },
+  "dependencies": {
+    "@kiddiespeech/config": "0.1.0",
+    "@supabase/supabase-js": "2.53.0",
+    "dotenv": "17.2.3",
+    "express": "5.1.0",
+    "stripe": "18.5.0"
+  }
+}
+

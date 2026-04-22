@@ -36,9 +36,26 @@ export type FeaturePipelineStep = {
   detail: string;
 };
 
+export type StripePrice = {
+  label: string;
+  lookupKey: string;
+  type: string;
+  interval?: string;
+  currency: string;
+  unitAmountCents: number;
+};
+
+export type StripeProduct = {
+  kind: string;
+  name: string;
+  planCode?: string;
+  prices: StripePrice[];
+};
+
 export const subscriptionPlans: SubscriptionPlan[];
 export const payAsYouUseMeters: UsageMeter[];
 export const aiProviderStack: AIProvider[];
 export const feedbackQueue: FeedbackQueueItem[];
 export const adminPlaybooks: AdminPlaybook[];
 export const featurePipeline: FeaturePipelineStep[];
+export const stripeProducts: StripeProduct[];

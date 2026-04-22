@@ -32,12 +32,14 @@ a {
 }
 
 .page-shell,
-.admin-shell {
+.admin-shell,
+.billing-shell {
   min-height: 100vh;
 }
 
 .hero,
-.admin-hero {
+.admin-hero,
+.billing-hero {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 2rem;
@@ -46,7 +48,8 @@ a {
 }
 
 .hero-copy h1,
-.admin-hero h1 {
+.admin-hero h1,
+.billing-hero h1 {
   font-size: clamp(2.8rem, 6vw, 5.8rem);
   line-height: 0.95;
   margin: 0.3rem 0 1rem;
@@ -62,7 +65,8 @@ a {
 }
 
 .lede,
-.admin-hero p {
+.admin-hero p,
+.billing-hero p {
   max-width: 40rem;
   font-size: 1.08rem;
   line-height: 1.7;
@@ -324,4 +328,3 @@ a {
     align-items: flex-start;
   }
 }
-

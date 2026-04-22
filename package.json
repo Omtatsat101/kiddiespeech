@@ -10,7 +10,8 @@
     "dev:web": "npm run dev --workspace @kiddiespeech/web",
     "build:web": "npm run build --workspace @kiddiespeech/web",
     "lint:web": "npm run lint --workspace @kiddiespeech/web",
-    "dev:mobile": "npm run start --workspace @kiddiespeech/mobile"
+    "dev:mobile": "npm run start --workspace @kiddiespeech/mobile",
+    "dev:api": "npm run dev --workspace @kiddiespeech/api",
+    "check:api": "npm run check --workspace @kiddiespeech/api"
   }
 }
-
